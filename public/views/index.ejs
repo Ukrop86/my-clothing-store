@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Магазин одягу</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Магазин одягу</h1>
+  <div class="products">
+    <% products.forEach(product => { %>
+      <div class="product">
+        <img src="/images/<%= product.image %>" alt="<%= product.name %>">
+        <h2><%= product.name %></h2>
+        <p><%= product.description %></p>
+        <button onclick="window.location.href='/product/<%= product.id %>'">Переглянути</button>
+      </div>
+    <% }); %>
+  </div>
+</body>
+</html>
